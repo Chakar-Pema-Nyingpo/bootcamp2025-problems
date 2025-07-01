@@ -19,3 +19,7 @@ strLengthEven("Hello");
 function findRabbit(arr) {
   return arr.map((word) => word.toLowerCase()).indexOf("rabbit");
 }
+
+function subtractTen(num) {
+  return num - 10;
+}
