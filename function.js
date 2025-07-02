@@ -40,3 +40,28 @@ function solution(str, ending) {
 function lovefunc(flower1, flower2) {
   return flower1 % 2 !== flower2 % 2;
 }
+// console.log(lovefunc(10, 12));
+
+// https://www.codewars.com/kata/5583090cbe83f4fd8c000051/train/javascript
+function digitize(n) {
+  return n.toString().split("").reverse().map(Number);
+}
+// console.log(digitize(12345));
+
+// https://www.codewars.com/kata/55f2b110f61eb01779000053/train/javascript
+function getSum(a, b) {
+  const min = Math.min(a, b);
+  const max = Math.max(a, b);
+  let sum = 0;
+  for (let i = min; i <= max; i++) {
+    sum += i;
+  }
+  return sum;
+}
+
+// https://www.codewars.com/kata/5656b6906de340bd1b0000ac/train/javascript
+function longest(s1, s2) {
+  return Array.from(new Set(s1 + s2))
+    .sort()
+    .join("");
+}
