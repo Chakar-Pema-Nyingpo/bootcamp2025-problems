@@ -65,3 +65,56 @@ function longest(s1, s2) {
     .sort()
     .join("");
 }
+
+// https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/javascript
+function findShort(s) {
+  return Math.min(...s.split(" ").map((word) => word.length));
+}
+// console.log(findShort("the quick brown fox jumped over the lazy fox"));
+
+// https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/javascript
+function repeatStr(n, s) {
+  return `${s.repeat(n)}`;
+}
+// console.log(repeatStr(5, "hello"));
+
+// https://www.codewars.com/kata/57a2013acf1fa5bfc4000921/train/javascript
+function findAverage(array) {
+  if (array.length === 0) {
+    return 0;
+  }
+
+  const sum = array.reduce(
+    (accumalator, currentValue) => accumalator + currentValue,
+    0
+  );
+  const average = sum / array.length;
+  return average;
+}
+// console.log(findAverage([1, 2, 3, 4, 5]));
+
+// https://www.codewars.com/kata/523b4ff7adca849afe000035/train/javascript
+function greet() {
+  return ["hello", "world!"].join(" ");
+}
+// console.log("hi", "karma");
+
+function squaredDigits(num) {
+  return num.toString().split("");
+}
+console.log(squaredDigits(1234));
+
+// https://www.codewars.com/kata/546e2562b03326a88e000020/train/javascript
+function squareDigits(num) {
+  const x = num.toString().split("");
+  const y = x.map(Number);
+  const z = [];
+  for (let i = 0; i < y.length; i++) {
+    z.push(y[i] * y[i]);
+    //   console.log(z)
+  }
+  const n = z.join("");
+  const m = Number(n);
+  return m;
+}
+// console.log(squareDigits(1233));
